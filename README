@@ -1,0 +1,14 @@
+DC Metro Train Tracking Project
+
+This project aims to develop a graphical client-side javascript application that pulls data from the DC Metro API in order to build a realtime representation of train locations on the metro.
+
+
+This project is my attempt at satisfying three goals:
+	1. Expanding my understanding of Ruby by prototyping the base algorithm
+	2. Learning the basics of Javascript by developing a client side application that will graphically track trains on the DC metro
+	3. Learn to use a REST API (the DC metro api)
+	4. Increase my comfort with recursion in developing the train tracking algorithm
+	
+	
+At present all that is implemented is a very preliminary version of the train tracking logic in ruby. It does not account for poorly labeled train data or for stations for which data is temporarily missing.
+I intend on implementing a train repair system to fix the station gaps, and a region growing esque (I am coming straight out of some image processing) method to accumulate poorly labeled trains and estimate their direction and location.
