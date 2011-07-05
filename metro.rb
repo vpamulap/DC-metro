@@ -50,6 +50,14 @@ class Train
     end
     returnstring
   end
+  def calculate_velocity(line)
+    if @predictions.length > 1
+      distance = (line[(@predictions.first.location_code)].station_location - line[(@predictions.last.location_code)].station_location).abs
+      return distance
+    else
+      return nil
+    end
+  end
 end
 
 class Station
@@ -246,9 +254,12 @@ consolidate_definite_trains(red_line, end_trains, :end)
 puts "START TRAINS\n-----------------------------------\n"
 start_trains.each {|train| puts train}
 
+
 puts "END TRAINS\n-----------------------------------\n"
 end_trains.each {|train| puts train}
 ##############
+
+puts red_line["A10"].name
 
 
 
